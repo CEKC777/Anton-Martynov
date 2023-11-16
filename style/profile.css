@@ -7,10 +7,12 @@
 
 @media (min-width: 768px) {
   .profile {
+    gap: 0;
+    column-gap: 35px;
     place-content: center;
     margin: 35px;
     display: grid;
-    grid-template-columns: [time] 2fr [img] 6fr [contacts] 2fr;
+    grid-template-columns: [time] 2fr [img] 5fr [contacts] 2fr;
     height: calc(100dvh - 35px - 66px - 35px);
   }
 }
