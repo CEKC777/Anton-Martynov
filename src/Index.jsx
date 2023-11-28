@@ -20,10 +20,10 @@ function Index() {
       </section>
       <section class="s2">
         <div class="grid-item">
-          <img src="media/player.gif" alt="" />
+          <img src="/media/player.gif" alt="" />
         </div>
         <div class="grid-item">
-          <img src="media/girl.gif" alt="" />
+          <img src="/media/girl.gif" alt="" />
         </div>
       </section>
     </main>

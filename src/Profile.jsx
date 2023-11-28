@@ -25,7 +25,7 @@ const Profile = () => {
         <br />
         VIDEO EDITOR
       </p>
-      <img src="media/anton.jpg" alt="" srcset="" />
+      <img src="/media/anton.jpg" alt="" srcset="" />
       <p id="contacts">
         <CLink to="mailto:martynovxas@gmail.com">MARTYNOVXAS@GMAIL.COM</CLink>
         <br />
