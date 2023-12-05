@@ -5,6 +5,13 @@ const Profile = () => {
   return (
     <main class="profile">
       <p id="timeline">
+        2022 - PRESENT
+        <br />
+        FREELANCE
+        <br />
+        VIDEO EDITING/DIRECTING
+        <br />
+        <br />
         2021 - 2022
         <br />
         AGENDA MEDIA AGENCY

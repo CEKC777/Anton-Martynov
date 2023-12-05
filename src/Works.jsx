@@ -20,12 +20,6 @@ const Works = () => {
       role: "Editing",
       year: 2022,
     },
-    {
-      src: "https://player.vimeo.com/video/799847448?h=758a768aad&title=0&byline=0&portrait=0",
-      title: "SBERBANK SVOEDELO RETRO DRIVER",
-      role: "Editing",
-      year: 2022,
-    },
   ];
 
   return (
