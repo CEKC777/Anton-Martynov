@@ -11,6 +11,10 @@ const Navbar = () => {
         window.scrollTo(0, 0)
     }
 
+    useEffect(() => {
+        return scroll
+    }, [])
+
     return (
         <>
             <header className="text-white flex justify-between max-md:pr-3 pl-3 md:pl-7 fixed top-0 left-0 z-[99] w-full md:w-1/3">
@@ -115,8 +119,7 @@ const Navbar = () => {
                         <br />
                         <a href="tel:+46707782279">+46 70-778 22 79</a>
                         <br /> <br />
-                        <a href="https://t.me/gandon" target="_blank">
-                            {' '}
+                        <a href="https://t.me/njysx" target="_blank">
                             TELEGRAM
                         </a>
                     </p>

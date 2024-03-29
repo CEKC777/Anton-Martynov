@@ -18,15 +18,21 @@ const Profile = () => {
                 <br />
                 <a href="tel:+46707782279">+46 70-778 22 79</a>
                 <br />
-                <a href="https://t.me/gandon" target="_blank">
+                <a
+                    href="https://www.instagram.com/martynovxas/"
+                    target="_blank"
+                >
                     INSTAGRAM
                 </a>
                 <br />
-                <a href="https://t.me/gandon" target="_blank">
+                <a href="https://t.me/njysx" target="_blank">
                     TELEGRAM
                 </a>
                 <br />
-                <a href="https://linked.in" target="_blank">
+                <a
+                    href="https://linkedin.com/in/antonxmartynov"
+                    target="_blank"
+                >
                     LINKEDIN
                 </a>
             </Block>

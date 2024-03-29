@@ -51,7 +51,8 @@ const VideoArea = ({ preview, src, videoId, className }) => {
             <div
                 onClick={() => setOpen(true)}
                 className={
-                    'h-fit relative hover:cursor-pointer w-fit ' + className
+                    'h-fit relative aspect-video hover:cursor-pointer w-full' +
+                    className
                 }
                 onMouseEnter={() => {
                     isTablet && setInitialState(false)
@@ -81,7 +82,7 @@ const VideoArea = ({ preview, src, videoId, className }) => {
                 ) : (
                     <div className="aspect-video">
                         <iframe
-                            src={full}
+                            src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0`}
                             frameBorder="0"
                             allow="autoplay; fullscreen; picture-in-picture"
                             className="w-full h-full"
