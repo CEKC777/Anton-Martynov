@@ -11,7 +11,7 @@ const TextCycle = ({ words }) => {
     }, [words])
 
     return (
-        <div className="text-[16.9vw] md:text-[140px]">
+        <div className="text-[16.9vw] md:text-[11vw]">
             {words[currentWordIndex]}
         </div>
     )

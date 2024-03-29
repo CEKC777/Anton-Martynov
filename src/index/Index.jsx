@@ -1,22 +1,19 @@
 import Block from '../common/Block.jsx'
 import TextCycle from './TextCycle.jsx'
 import useScreen from '../useScreen.js'
+import Introduction from './Introduction.jsx'
+import ProjectsCounter from './ProjectsCounter.jsx'
+import { useMotionValue, useTransform, animate } from 'framer-motion'
+import { useEffect } from 'react'
 
 function Index() {
     const { isTablet } = useScreen()
 
     return (
-        <main className="mt-20 md:mt-36">
-            <Block title={'BASICS'}>
-                HI! MY NAME IS ANTON.
-                <br />I AM VIDEO EDITOR & DIRECTOR
-                {isTablet && <br />}
-                WITH OVER {!isTablet && <br />} 5 YEARS OF EXPERIENCE.
-                <br />
-                {!isTablet && <br />}BASED IN SWEDEN.
-            </Block>
+        <main>
+            <Introduction />
 
-            <div className="girl pt-[23vw] md:pt-3 mt-20 md:mt-48">
+            <div className="girl pt-[23vw] md:pt-3">
                 <Block title={'VISION'} sectionClass="max-md:!pt-0">
                     EMOTIONS ARE WHAT {!isTablet && <br />} I AIM{' '}
                     {isTablet && <br />}
@@ -52,14 +49,7 @@ function Index() {
                 />
             </Block>
 
-            <div className="text-white pl-3 md:pl-7 flex max-md:items-baseline flex-col mt-16 max-md:mb-20 md:mt-24">
-                <p className="font-medium text-[210px] md:text-[277px] leading-[0.7] md:leading-[1] tracking-[-10px]">
-                    31
-                </p>
-                <p className="max-md:pt-5 leading-[1]">
-                    COMPLETED PROJECTS {!isTablet && <br />} IN 2023
-                </p>
-            </div>
+            <ProjectsCounter />
             <div className="cs max-md:pt-[28vw] mt-5 md:mb-10">
                 <Block
                     title={'FUN FACT'}
