@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.93), rgba(0,0,0,0.93)), url('/media/noise.gif');
+}
+
+.girl {
+    background: url('/media/girl.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cs {
+    background: url('/media/cs.gif');
+    background-position-x: 65%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .cs {
+        background-size: cover;
+    }
+}
+
+@font-face {
+    font-family: 'hel';
+    src: url('/fonts/regular.ttf');
+}
+@font-face {
+    font-family: 'helmed';
+    src: url('/fonts/medium.ttf');
+}
