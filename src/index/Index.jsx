@@ -1,7 +1,6 @@
 import Block from '../common/Block.jsx'
 import TextCycle from './TextCycle.jsx'
 import useScreen from '../useScreen.js'
-import { Fade } from 'react-awesome-reveal'
 
 function Index() {
     const { isTablet } = useScreen()
