@@ -11,13 +11,13 @@ const WorkSection = ({ work }) => {
                 className="max-md:row-start-4"
                 preview={work.preview1}
                 src={work.video1}
-                full={work.full1}
+                videoId={work.id1}
             />
             <VideoArea
                 className="max-md:row-start-3"
                 preview={work.preview2}
                 src={work.video2}
-                full={work.full2}
+                videoId={work.id2}
             />
         </li>
     )
