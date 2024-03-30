@@ -38,8 +38,8 @@ const Introduction = () => {
             >
                 HI! MY NAME IS ANTON.
                 <br />I AM VIDEO EDITOR & DIRECTOR
-                {isTablet && <br />}
-                WITH OVER {!isTablet && <br />} 5 YEARS OF EXPERIENCE.
+                {isTablet && <br />} WITH OVER {!isTablet && <br />} 5 YEARS OF
+                EXPERIENCE.
                 <br />
                 {!isTablet && <br />}BASED IN SWEDEN.
             </Block>

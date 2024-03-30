@@ -2,7 +2,7 @@ import VideoArea from './VideoArea.jsx'
 
 const WorkSection = ({ work }) => {
     return (
-        <li className="grid max-md:grid-rows-[auto_auto_auto_auto] md:grid-cols-[1fr_2fr] px-3 md:px-7 gap-3 md:gap-7 mt-20 mb-40">
+        <li className="grid max-md:grid-rows-[auto_auto_auto_auto] md:grid-cols-[1fr_2fr] px-3 md:px-7 gap-3 md:gap-7 mt-20 md:mt-32 mb-40">
             <p className="text-[7.4vw] md:text-[3.3vw] leading-[1] md:leading-[0.9] font-medium md:tracking-[-1.5px]">
                 {work.title}
             </p>
