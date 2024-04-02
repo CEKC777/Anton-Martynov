@@ -3,7 +3,7 @@ import { Cross as Hamburger } from 'hamburger-react'
 import useScreen from '../useScreen.js'
 import Player from '@vimeo/player'
 
-const VideoArea = ({ preview, src, videoId, className }) => {
+const VideoArea = ({ preview, src, videoId, className, title }) => {
     const [initialState, setInitialState] = useState(true)
     const [open, setOpen] = useState(false)
     const { isTablet } = useScreen()
@@ -11,6 +11,16 @@ const VideoArea = ({ preview, src, videoId, className }) => {
 
     const playerRef = useRef(null)
     const [player, setPlayer] = useState(null)
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!isTablet) return
+            if (e.key === 'Escape') setOpen(false)
+        }
+
+        window.addEventListener('keydown', handleKeyDown)
+        return () => window.removeEventListener('keydown', handleKeyDown)
+    }, [])
 
     useEffect(() => {
         const createPlayer = async () => {
@@ -49,47 +59,54 @@ const VideoArea = ({ preview, src, videoId, className }) => {
     return (
         <>
             <div
-                onClick={() => setOpen(true)}
                 className={
-                    'h-fit relative aspect-video hover:cursor-pointer w-full' +
+                    'h-fit relative flex flex-col aspect-video w-full ' +
                     className
                 }
-                onMouseEnter={() => {
-                    isTablet && setInitialState(false)
-                    videoRef.current && isTablet && videoRef.current.play()
-                }}
-                onMouseLeave={() => {
-                    setInitialState(true)
-                    videoRef.current && isTablet && videoRef.current.pause()
-                }}
             >
-                {isTablet && (
-                    <img
-                        src={'/previews/' + preview}
-                        className="aspect-video absolute top-0 left-0 transition-opacity duration-300 h-full w-full"
-                        style={{
-                            opacity: initialState ? 1 : 0,
-                        }}
-                    />
-                )}
-                {isTablet ? (
-                    <video
-                        ref={videoRef}
-                        src={'/videos/' + src}
-                        loop={true}
-                        muted
-                    />
-                ) : (
-                    <div className="aspect-video">
-                        <iframe
-                            src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0`}
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            className="w-full h-full"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                )}
+                <div
+                    className="hover:cursor-pointer w-full aspect-video"
+                    onClick={() => setOpen(true)}
+                    onMouseEnter={() => {
+                        isTablet && setInitialState(false)
+                        videoRef.current && isTablet && videoRef.current.play()
+                    }}
+                    onMouseLeave={() => {
+                        setInitialState(true)
+                        videoRef.current && isTablet && videoRef.current.pause()
+                    }}
+                >
+                    {isTablet && (
+                        <img
+                            src={'/previews/' + preview}
+                            className="aspect-video absolute top-0 left-0 transition-opacity duration-300 w-full"
+                            style={{
+                                opacity: initialState ? 1 : 0,
+                            }}
+                        />
+                    )}
+                    {isTablet ? (
+                        <video
+                            ref={videoRef}
+                            src={'/videos/' + src}
+                            loop={true}
+                            muted
+                            className="p-px"
+                        />
+                    ) : (
+                        <div className="aspect-video">
+                            <iframe
+                                src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0`}
+                                frameBorder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                className="w-full h-full"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    )}
+                </div>
+
+                <p className="pt-3 md:text-lg">{title}</p>
             </div>
 
             <div

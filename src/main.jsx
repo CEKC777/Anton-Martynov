@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import Index from './index/Index.jsx'
-import Navbar from './common/Navbar.jsx'
-import Works from './works/Works.jsx'
-import Profile from './profile/Profile.jsx'
+const Index = lazy(() => import('./index/Index.jsx'))
+const Navbar = lazy(() => import('./common/Navbar.jsx'))
+const Works = lazy(() => import('./works/Works.jsx'))
+const Profile = lazy(() => import('./profile/Profile.jsx'))
 import './index.css'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -13,9 +13,30 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <BrowserRouter>
             <Navbar />
             <Routes>
-                <Route path="" element={<Index />} />
-                <Route path="works" element={<Works />} />
-                <Route path="contact" element={<Profile />} />
+                <Route
+                    path=""
+                    element={
+                        <Suspense>
+                            <Index />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="works"
+                    element={
+                        <Suspense>
+                            <Works />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="contact"
+                    element={
+                        <Suspense>
+                            <Profile />
+                        </Suspense>
+                    }
+                />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

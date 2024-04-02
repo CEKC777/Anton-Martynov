@@ -17,11 +17,13 @@ body {
     background-position-x: 65%;
     background-size: contain;
     background-repeat: no-repeat;
+    min-height:100%
 }
 
 @media (min-width: 768px) {
     .cs {
         background-size: cover;
+        background-position-y: center;
     }
 }
 

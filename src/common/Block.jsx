@@ -9,12 +9,11 @@ const Block = ({ title, children, className, handler, sectionClass }) => {
                 sectionClass
             }
         >
-            {title || (isTablet && <p className="">{title}</p>)}
-
+            {(title || isTablet) && <p className="md:text-lg">{title}</p>}
             <div
                 onMouseEnter={() => handler && handler()}
                 className={
-                    'text-[7.4vw] md:pl-5 md:text-[3.3vw] leading-[1] md:leading-[0.9] font-medium md:tracking-[-1.5px] h-fit ' +
+                    'text-[7.4vw] md:pl-5 md:text-[3.5vw] leading-[1] md:leading-[0.9] font-medium md:tracking-[-1.5px] h-fit ' +
                     className
                 }
             >

@@ -4,8 +4,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                primary: ['hel', 'cursive'],
-                medium: ['helmed', 'cursive'],
+                primary: ['hel', 'sans-serif'],
+                medium: ['helmed', 'sans-serif'],
             },
         },
     },
