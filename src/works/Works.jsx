@@ -21,7 +21,7 @@ const Works = () => {
         {
             preview1: 'sber_alp1.jpg',
             video1: 'sber_alp.mp4',
-            id1: 799845430,
+            id1: 934921550,
             name1: 'DMITRY',
             preview2: 'sber_guide1.jpg',
             video2: 'sber_guide.mp4',

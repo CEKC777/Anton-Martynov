@@ -50,7 +50,15 @@ function Index() {
                     />
                 </Block>
 
-                <ProjectsCounter />
+                {/* <ProjectsCounter /> */}
+                <Block
+                    title={'COMPLETED PROJECTS IN 2023'}
+                    sectionClass="!pb-2"
+                >
+                    <p className="font-medium text-[220px] md:text-[19.5vw] leading-[0.7] md:leading-[0.72] tracking-[-10px]">
+                        31
+                    </p>
+                </Block>
                 <div className="cs max-md:pt-[23vw] mt-5">
                     <Block
                         title={'FUN FACT'}
