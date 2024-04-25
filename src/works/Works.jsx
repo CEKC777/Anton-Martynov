@@ -25,7 +25,7 @@ const Works = () => {
             name1: 'DMITRY',
             preview2: 'sber_guide1.jpg',
             video2: 'sber_guide.mp4',
-            id2: 797666557,
+            id2: 939040750,
             name2: 'PAVEL',
             title: 'SBERBANK',
             text: "Advertising for Russia's largest bank: The project showcases real individuals who have achieved success while doing what they love. Each video in the project tells a distinct, complete story with its own unique style and presentation, reflecting the protagonist's activities and personality.",
