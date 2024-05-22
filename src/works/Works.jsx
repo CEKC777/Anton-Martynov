@@ -14,7 +14,7 @@ const Works = () => {
             preview2: 'diver.jpg',
             video2: 'fx1.mp4',
             id2: 795577052,
-            name2: 'THIS IS NEW YOU',
+            name2: 'THIS IS THE NEW YOU',
             title: 'FXPRO',
             text: "A series of videos for the brokerage company FxPro that was entirely assembled from stock footage. The outcome was outstanding with the final videos having been broadcasted on the world's leading financial channel, Bloomberg TV.",
         },
